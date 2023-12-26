@@ -6,29 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/mytext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:textSize="60sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.231" />
-
     <Button
         android:id="@+id/mybutton"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
+        android:layout_width="85dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
         android:text="Add"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.196"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mytext"
-        app:layout_constraintVertical_bias="0.223" />
+        app:layout_constraintStart_toEndOf="@+id/inputForm"
+        app:layout_constraintTop_toBottomOf="@+id/consoleTextView" />
 
     <TextView
         android:id="@+id/consoleTextView"
@@ -37,39 +23,36 @@
         android:background="#221F1F"
         android:outlineAmbientShadowColor="#03A9F4"
         android:outlineSpotShadowColor="#E91E63"
+        android:scrollHorizontally="true"
         android:shadowColor="#1C1A1A"
         android:textColor="#4CAF50"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mybutton" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.059" />
 
     <Button
         android:id="@+id/clearButton"
         android:layout_width="87dp"
         android:layout_height="79dp"
-        android:layout_marginTop="91dp"
-        android:layout_marginBottom="311dp"
+        android:layout_marginTop="16dp"
         android:text="Clear"
-        app:layout_constraintBottom_toBottomOf="@+id/consoleTextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.614"
-        app:layout_constraintStart_toEndOf="@+id/mybutton"
-        app:layout_constraintTop_toBottomOf="@+id/mytext"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/mybutton"
+        tools:layout_editor_absoluteX="296dp" />
 
     <EditText
         android:id="@+id/inputForm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="254dp"
+        android:layout_height="53dp"
+        android:cursorVisible="true"
         android:ems="10"
         android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/consoleTextView"
+        android:scrollHorizontally="true"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.191"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mytext"
-        app:layout_constraintVertical_bias="0.142" />
+        app:layout_constraintTop_toBottomOf="@+id/consoleTextView" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
