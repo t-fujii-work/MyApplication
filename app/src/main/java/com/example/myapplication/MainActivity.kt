@@ -11,12 +11,16 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+        val console = Console()
+        val cs = ConsoleService()
+        cs.console = console
+        cs.textView = binding.consoleTextView
+        cs.refresh()
         binding.mybutton.setOnClickListener {
-            textOverride("Hello Android!!")
+            cs.add(binding.inputForm.text.toString())
         }
-    }
-
-    fun textOverride(text: String) {
-        binding.mytext.text = text
+        binding.clearButton.setOnClickListener {
+            cs.clear()
+        }
     }
 }
